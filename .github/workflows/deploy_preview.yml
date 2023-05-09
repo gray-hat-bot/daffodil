@@ -50,7 +50,7 @@ jobs:
       - run: ls -Al .
         name: Review Folder    
            
-      - run: unzip -q daffio-16.x -d . && rm daffio-16.x
+      - run: unzip -q daffio-16.x.zip -d . && rm daffio-16.x.zip
         name: Unzip internal artifact zip
 
       - run: ls -Al .
