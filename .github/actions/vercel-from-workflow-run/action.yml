@@ -29,7 +29,7 @@ outputs:
 runs:
   using: 'composite'
   steps:
-  - run: rm -rf ${{ github.workspace }}/{*,.*}
+  - run: rm -rf ${{ github.workspace }}/ && mkdir -p ${{ github.workspace }}/
     shell: bash
   - name: 'Download ${{ inputs.artifact }}'
     uses: actions/github-script@v3.1.0
