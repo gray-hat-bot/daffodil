@@ -40,15 +40,19 @@ runs:
   
   - run: ls -Al .
     name: Review Folder
+    shell: bash
         
   - run: unzip -q ${{ inputs.artifact }}.zip -d . && rm ${{ inputs.artifact }}.zip
     name: Unzip {{ inputs.artifact }}.zip
+    shell: bash
 
   - run: ls -Al .
-    name: Review Folder    
+    name: Review Folder
+    shell: bash
 
   - run: unzip -q ${{ inputs.artifact-zip-name }} -d . && rm ${{ inputs.artifact-zip-name }}
     name: Unzip ${{ inputs.artifact-zip-name }}
+    shell: bash
 
   - uses: graycoreio/github-actions/angular-universal-vercel@main
     id: vercel-deploy
