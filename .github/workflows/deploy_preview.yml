@@ -59,6 +59,10 @@ jobs:
       - run: unzip -q daffio.zip -d . && rm daffio.zip
         name: Unzip internal artifact zip
 
+      - run: ls -Al .
+        name: Review Folder    
+
+
       - uses: graycoreio/github-actions/angular-universal-vercel@main
         id: vercel-deploy
         with:
