@@ -1,6 +1,7 @@
 on:
   workflow_run:
     workflows: ["Daffodil Build"]
+    branches-ignore: ["master", "main", "develop"]
     types:
       - completed
 
