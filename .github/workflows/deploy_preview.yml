@@ -1,3 +1,5 @@
+name: Daffodil PR Preview
+
 on:
   workflow_run:
     workflows: ["Daffodil Build"]
